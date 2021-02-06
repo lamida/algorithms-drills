@@ -1,13 +1,14 @@
-input = "alula"
+def palindrome(inn):
+    left = 0  
+    right = len(inn) - 1
+    while left < right:
+        if inn[left] == inn[right]:
+            left += 1
+            right -= 1
+            continue
+        else: 
+            return False
+    return True
 
-for i in range(len(input)):
-    j = len(input) - i - 1
-    if i > j: 
-        break
-    #print(f"i: {i} j: {j}")
-    print(f"left: {input[i]} right: {input[j]}")
-    if input[i] != input[j]:
-        print("no")
-        break
-print("yes")
+print(palindrome("alxula"))
 
