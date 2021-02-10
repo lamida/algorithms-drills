@@ -1,4 +1,6 @@
-# This is ridiculous, but I am still loss in merge sort :(
+# This is the implementation merge sort based on Sedgewick
+# Lesson learned: splicing list, will create a copy!
+# If you want to modify the list, use reference and index. No splicing!
 import random
 from typing import List
 
