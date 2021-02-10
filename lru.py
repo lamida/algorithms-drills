@@ -14,7 +14,7 @@ class LRUCache:
         return -1
 
 
-     def put(self, key: int, value: int) -> None:
+    def put(self, key: int, value: int):
         for i in range(len(self.d)):
             if self.d[i] is not None and self.d[i][0] == key:
                 self.d[i] = (key, value)
