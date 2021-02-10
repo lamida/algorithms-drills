@@ -1,19 +1,18 @@
-# This is ridiculous, but I am still loss in merge sort :(
-import random
+# Use this to practice merge sort. Compare the result with merge_sort.py
 from typing import List
+import random
 
 
 def merge(arr: List[int], lo: int, mid: int, hi: int):
     i = lo
     j = mid + 1
-
     aux = arr.copy()
 
-    for k in range(lo, hi+1):
+    for k in range(lo, hi + 1):
         if i > mid:
             arr[k] = aux[j]
             j += 1
-        elif j > hi:  
+        elif j > hi:
             arr[k] = aux[i]
             i += 1
         elif aux[j] < aux[i]:
@@ -27,14 +26,14 @@ def merge(arr: List[int], lo: int, mid: int, hi: int):
 def sort(arr: List[int], lo: int, hi: int):
     if hi <= lo:
         return
-    mid = lo + (hi-lo)//2
+    mid = lo + (hi - lo)//2
     sort(arr, lo, mid)
     sort(arr, mid+1, hi)
     merge(arr, lo, mid, hi)
 
 
 def merge_sort(arr: List[int]):
-    sort(arr, 0, len(arr)-1)
+    sort(arr, 0, len(arr) - 1)
 
 
 if __name__ == "__main__":
