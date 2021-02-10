@@ -27,6 +27,7 @@ def merge(arr: List[int], lo: int, mid: int, hi: int):
 
 
 def sort(arr: List[int], lo: int, hi: int):
+    # Base case when lo and hi are 0
     if hi <= lo:
         return
     mid = lo + (hi-lo)//2
