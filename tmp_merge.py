@@ -1,21 +1,18 @@
-# This is the implementation merge sort based on Sedgewick
-# Lesson learned: splicing list, will create a copy!
-# If you want to modify the list, use reference and index. No splicing!
-import random
+# Use this to practice merge sort. Compare the result with merge_sort.py
 from typing import List
+import random
 
 
 def merge(arr: List[int], lo: int, mid: int, hi: int):
     i = lo
     j = mid + 1
-
     aux = arr.copy()
 
-    for k in range(lo, hi+1):
+    for k in range(lo, hi + 1):
         if i > mid:
             arr[k] = aux[j]
             j += 1
-        elif j > hi:  
+        elif j > hi:
             arr[k] = aux[i]
             i += 1
         elif aux[j] < aux[i]:
@@ -27,17 +24,16 @@ def merge(arr: List[int], lo: int, mid: int, hi: int):
 
 
 def sort(arr: List[int], lo: int, hi: int):
-    # Base case when lo and hi are 0
     if hi <= lo:
         return
-    mid = lo + (hi-lo)//2
+    mid = lo + (hi - lo)//2
     sort(arr, lo, mid)
     sort(arr, mid+1, hi)
     merge(arr, lo, mid, hi)
 
 
 def merge_sort(arr: List[int]):
-    sort(arr, 0, len(arr)-1)
+    sort(arr, 0, len(arr) - 1)
 
 
 if __name__ == "__main__":
