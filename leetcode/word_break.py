@@ -17,6 +17,17 @@ class Solution:
             memo[start] = False
             return memo[start]
         return wb(s, wordDict, 0, [False] * len(s))
+    
+    def wordBreakDp(self, s: str, wordDict: FrozenSet[str]) -> bool:
+        dp = [False] * (len(s) + 1)
+        dp[0] = True
+
+        for end in range(1, len(s) + 1):
+            for start in range(end):
+                if dp[start] and s[start:end] in wordDict:
+                    d[end] = True
+                    break
+        return dp[len(s)]
 
 if __name__ == "__main__":
     s = Solution()
