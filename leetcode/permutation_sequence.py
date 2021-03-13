@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/permutation-sequence/
+# Time limit exceeded
 from heapq import heappush, heappop
 class Solution:
     def getPermutation(self, n: int, k: int) -> str:
