@@ -15,14 +15,14 @@ class Solution:
             backtrack()    
         return output
 
-        # Another approach
-        def subsets(self, nums: List[int]) -> List[List[int]]:
-            result = []
-            def backtrack(candidates: List[int], depth: int = 0):
-                if depth == len(nums):
-                    result.append(candidates[:])
-                else:
-                    backtrack(candidates + [nums[depth]], depth + 1)
-                    backtrack(candidates, depth + 1)
-            backtrack([])
-            return result
+    # Another approach
+    def subsets2(self, nums: List[int]) -> List[List[int]]:
+        result = []
+        def backtrack(candidates: List[int], depth: int = 0):
+            if depth == len(nums):
+                result.append(candidates[:])
+            else:
+                backtrack(candidates + [nums[depth]], depth + 1)
+                backtrack(candidates, depth + 1)
+        backtrack([])
+        return result

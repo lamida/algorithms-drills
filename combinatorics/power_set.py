@@ -1,6 +1,6 @@
 from typing import List, Set
 
-
+# This is too complex. See subsets for simpler backtracking implementation.
 def power_set(inn: List[str]) -> List[str]:
     """
     Generate bitset backtrack
