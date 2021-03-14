@@ -1,3 +1,4 @@
+# Old permutation attempt. See permutation.py for more thoughtful attempt.
 from typing import List
 def permutate(arr: List[int]) -> List[List[int]]:
     res = []
