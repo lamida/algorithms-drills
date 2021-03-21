@@ -58,6 +58,8 @@ def bfs(root: TreeNode):
             q.append(current.right)
 
 if __name__ == "__main__":
+    # https://en.wikipedia.org/wiki/Binary_tree#:~:text=In%20computer%20science%2C%20a%20binary,child%20and%20the%20right%20child.
+    # Replace the root with 1
     tree = TreeNode(1, TreeNode(7, TreeNode(2), TreeNode(6, TreeNode(5), TreeNode(11))), TreeNode(5, None, TreeNode(9, TreeNode(4))))
     print("preorder")
     preorder(tree)
